@@ -4,17 +4,6 @@ on:
   push:
     branches: ['main']
 
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
-
 jobs:
   build:
     environment:
@@ -42,6 +31,9 @@ jobs:
           path: './build'
 
   deploy:
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
