@@ -24,7 +24,7 @@ jobs:
       - name: Build
         run: npm ci && npm run build
         env:
-          PUBLIC_URL: /akeome-react
+          PUBLIC_URL: https://trimscash.github.io/akeome-react
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

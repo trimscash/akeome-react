@@ -15,7 +15,7 @@
         "related_applications": [
                 {
                         "platform": "play",
-                        "url": "%PUBLIC_URL%/akeome/"
+                        "url": "https://trimscash.github.io/akeome-react/"
                 }
         ]
 }
